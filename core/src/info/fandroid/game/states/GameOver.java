@@ -26,7 +26,7 @@ public class GameOver extends State {
         gameover = new Texture("gameover.png");
         mModel = new Model();
         mModel.setHighScore(score);
-        highScore = new StringBuilder().append(mModel.getHighScore()).toString();
+        highScore = String.valueOf(mModel.getHighScore());
     }
 
     @Override
@@ -54,8 +54,8 @@ public class GameOver extends State {
     //FlappyDemo.font.draw(sb, "tap to retry", camera.position.x-gameover.getWidth()/4 - gameover.getWidth()/16, camera.position.y - 2*gameover.getHeight()/3 - 1);
 
 
-        FlappyDemo.shadow.draw(sb, "tap to retry", camera.position.x + 4*FlappyDemo.shadow.getXHeight() , camera.position.y - 3*gameover.getHeight()/4);
-        FlappyDemo.font.draw(sb, "tap to retry", camera.position.x + 4*FlappyDemo.shadow.getXHeight(), camera.position.y - 3*gameover.getHeight()/4 - 1);
+    FlappyDemo.shadow.draw(sb, "tap to retry", camera.position.x + 4*FlappyDemo.shadow.getXHeight() , camera.position.y - 3*gameover.getHeight()/2);
+    FlappyDemo.font.draw(sb, "tap to retry", camera.position.x + 4*FlappyDemo.shadow.getXHeight(), camera.position.y - 3*gameover.getHeight()/2 - 1);
 
 
         sb.end();

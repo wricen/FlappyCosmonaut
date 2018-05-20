@@ -15,6 +15,7 @@ public class FlappyDemo extends ApplicationAdapter {
 	public static final int  HEIGHT = 800;
 	public static final String TITLE = "Flappy Demo";
 
+	private int huy;
 
 	public static BitmapFont font, shadow;
 
